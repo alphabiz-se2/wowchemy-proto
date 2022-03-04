@@ -1,0 +1,130 @@
+# SITE SETUP
+# Guide: https://wowchemy.com/docs/getting-started/
+# Documentation: https://wowchemy.com/docs/
+# This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
+
+########################################################################################################################
+
+# Appearance
+#appearance:
+#  theme_day: 1950s
+#  theme_night: 1950s
+font_size: L
+
+# Site header
+header:
+  navbar:
+    enable: true
+    align: r
+    highlight_active_link: true
+    show_language: true
+    show_translations: true
+    show_day_night: true
+    show_search: true
+    show_logo: true
+
+plugins_js:
+  []
+plugins_vendor:
+  []
+
+# contact footer
+contact:
+  - type: email
+    val: 'aws@alpha.biz'
+
+  - type: github
+    val: 'https://github.com/'
+
+  - type: twitter
+    val: 'https://twitter.com/home'
+
+########################################################################################################################
+
+cms:
+  branch: main
+  local_backend: false
+
+sharing: false # blog share
+
+# contact widget links
+email:
+phone:
+address:
+  street:
+directions:
+office_hours:
+appointment_url:
+
+########################################################################################################################
+
+# SEO
+
+site_type: Person
+local_business_type: ''
+org_name: ''
+description: 'A highly-customizable Hugo blog theme powered by Wowchemy website builder.'
+twitter: 'wowchemy'
+
+
+# Localization
+date_format: '2006, Jan 2'
+time_format: '3:04 PM'
+
+# Site features
+
+highlight: true
+highlight_languages:
+  - r
+math: false
+diagram: false
+privacy_pack: false
+require_isotope: false  # Enable if you use Portfolio widget or Publication pages
+edit_page:
+  repo_url: ''
+  content_dir: ''
+  repo_branch: main
+  editable:
+    post: false
+show_related:
+  post: true
+sharing_image: ''
+reading_time: true
+section_pager: true
+#copyright_license:
+#  enable: true
+#  allow_derivatives: false
+#  share_alike: true
+#  allow_commercial: false
+#  notice: 'This work is licensed under {license}'
+avatar:
+  gravatar: false
+  shape: circle
+comments:
+  provider: ''
+  commentable:
+    post: true
+  disqus:
+    shortname: ''
+    show_count: true
+  commento:
+    url: ''
+search:
+  provider: wowchemy
+  algolia:
+    app_id: ''
+    api_key: ''
+    index_name: ''
+    show_logo: false
+map:
+  provider: ''
+  api_key: ''
+  zoom: 15
+marketing:
+  google_analytics: ''
+  google_tag_manager: ''
+  google_site_verification: ''
+icon:
+  pack:
+    ai: false
+
