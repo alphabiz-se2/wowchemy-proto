@@ -1,5 +1,5 @@
 {{ $page := . }}
-{{ $featured := (.Resources.ByType "image").GetMatch "*featured*" }}
+{{ $resource := (partial "functions/get_post_image" .) }}
 {{ $anchor := $page.Params.image.focal_point | default "Smart" }}
 
 {{/* Set default titles for node pages */}}

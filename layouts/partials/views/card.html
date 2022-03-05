@@ -21,7 +21,6 @@
 {{ end }}
 
 <div class="card-simple view-card">
-
   {{ if eq $item.Type "event" }}
   <div class="article-metadata">
     {{ if $item.Params.authors }}
@@ -41,7 +40,8 @@
     {{ partial "page_metadata" (dict "page" $item "is_list" 1) }}
   {{ end }}
 
-  {{ $resource := ($item.Resources.ByType "image").GetMatch "*featured*" }}
+  {{ $resource := (partial "functions/get_post_image" $item) }}
+
   {{ $anchor := $item.Params.image.focal_point | default "Smart" }}
   {{ with $resource }}
   {{ $image := .Fill (printf "808x455 webp %s" $anchor) }}
