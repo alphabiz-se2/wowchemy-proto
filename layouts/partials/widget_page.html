@@ -120,11 +120,11 @@
   {{ $use_cols := in (slice "pages" "featured" "experience" "accomplishments" "contact" "blank" "tag_cloud" "portfolio") $widget }}
 
   {{/* Dedicated child div for bg prevents parallax 100% height issue within new CSS grid page wrapper. */}}
-  {{ $text_color_light := ($bg.text_color_light | default false )}}
+  {{ $text_color_style := $bg.text_color_style | default "" }}
   <section id="{{$hash_id}}" class="
       home-section
       {{$widget_class}}
-      {{if $text_color_light}}dark{{else}}light{{end}}
+      {{$$text_color_style}}
       {{with $css_classes}}{{.}}{{end}}"
       {{with $style}}style="{{. | safeCSS}}"{{end}}
       {{print $extra_attributes | safeHTMLAttr}}>
