@@ -137,7 +137,7 @@
     {{ end }}
 
     {{/* Page Data */}}
-    {{ $default_headroom := .Params.header.hideOnScroll | default (not (.IsHome | or (eq .Type "book"))) }}
+    {{ $default_headroom := .Params.header.hideOnScroll | default false }}
     {{ $use_headroom := cond (isset $.Params "header.on_scroll") (eq $.Params.header.on_scroll "disappear") (default $default_headroom) }}
     {{ printf "<script id=\"page-data\" type=\"application/json\">%s</script>" (dict "use_headroom" $use_headroom | jsonify) | safeHTML}}
 
