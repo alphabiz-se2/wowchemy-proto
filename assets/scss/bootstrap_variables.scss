@@ -4,6 +4,15 @@
 $primary: $sta-primary;
 $text-muted: rgba(0, 0, 0, 0.54);
 
+// Grid widths
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
 // Container widths
 $container-max-widths: (
   sm: 540px,

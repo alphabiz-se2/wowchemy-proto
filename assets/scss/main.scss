@@ -45,8 +45,16 @@ $sta-home-section-even: {{ $scr.Get "home_section_even" }};
 $sta-dark-home-section-odd: {{ $scr.Get "dark_home_section_odd" }};
 $sta-dark-home-section-even: {{ $scr.Get "dark_home_section_even" }};
 
+// Wowchemy proto append
+$sta-menu-hover: {{ $scr.Get "menu_hover" }};
+$sta-menu-border: {{ $scr.Get "menu_border" }};
+$sta-menu-shadow: {{ $scr.Get "menu_shadow" }};
+$sta-menu-blur: {{ $scr.Get "menu_blur" }};
+
+
 @import "bootstrap_variables";
 @import "_vendor/bootstrap/bootstrap";
 @import "wowchemy/wowchemy";
+@import "wowchemy_proto/index";
 @import "template";
 @import "custom";
