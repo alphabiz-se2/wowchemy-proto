@@ -51,10 +51,15 @@ $sta-menu-border: {{ $scr.Get "menu_border" }};
 $sta-menu-shadow: {{ $scr.Get "menu_shadow" }};
 $sta-menu-blur: {{ $scr.Get "menu_blur" }};
 
-
 @import "bootstrap_variables";
 @import "_vendor/bootstrap/bootstrap";
 @import "wowchemy/wowchemy";
 @import "wowchemy_proto/index";
+
+{{ range $val := (resources.Match "scss/main_*.scss") }}
+{{ $path := path.Base (string $val) }}
+  @import "{{ $path }}";
+{{ end }}
+
 @import "template";
 @import "custom";
