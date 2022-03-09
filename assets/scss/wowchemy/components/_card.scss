@@ -41,12 +41,12 @@ a.summary-link {
 }
 
 .card {
-  margin-bottom: 1.5rem;
+  //margin-bottom: 1.5rem;
   overflow: hidden;
   text-overflow: ellipsis;
   background: #fff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  transition: all 0.2s ease-out;
+  transition: all 100ms ease-out;
 }
 
 .card .card-image {
@@ -76,7 +76,8 @@ a.summary-link {
 }
 
 .card .card-text {
-  padding: 0.75rem 1rem 0.75rem;
+  //padding: 0.75rem 1rem 0.75rem;
+  padding-top: 1rem;
 }
 
 .card .card-text p {
