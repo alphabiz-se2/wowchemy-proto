@@ -1,9 +1,13 @@
 /*************************************************
  *  Contact
  **************************************************/
+//
+//.wg-contact > .container {
+//  max-width: 1024px;
+//}
 
-.wg-contact > .container {
-  max-width: 1024px;
+.wg-contact form {
+  max-width: 600px;
 }
 
 .wg-contact .fa-ul {
@@ -19,8 +23,14 @@
 }
 
 .wg-contact li {
-  padding-top: 0.8rem; /* Align text with bottom of `fa-2x` icon. */
-  margin-bottom: 0.3rem;
+  //padding-top: 0.8rem; /* Align text with bottom of `fa-2x` icon. */
+  //margin-bottom: 0.3rem;
+  padding: 0.55rem 0;
+}
+
+.wg-contact i {
+  top: 0.5rem !important;
+  font-size: 1.5rem;
 }
 
 .wg-contact li:last-of-type {
