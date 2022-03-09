@@ -1,7 +1,6 @@
 {{ $ := .root }}
 {{ $st := .page }}
 {{ $autolink := default true $st.Params.content.autolink }}
-{{ $data := site.Params }}
 
 {{ $form_provider := lower $st.Params.content.form.provider | default "" }}
 {{ $form_provider_legacy := $st.Params.email_form | default 0 }}
@@ -20,8 +19,6 @@
 {{ end }}
 
 <div class="col-12 {{if eq $columns "2"}}col-lg-8{{end}}">
-  {{ with $st.Content }}{{ . }}{{ end }}
-
   {{ if $use_form }}
 
     {{ $post_action := "" }}
@@ -71,6 +68,9 @@
     </div>
   {{ end }}
 
+  {{ with $st.Content }}{{ . }}{{ end }}
+
+  {{ $data := site.Params }}
   <ul class="fa-ul">
 
     {{ if $data.email }}
@@ -150,14 +150,14 @@
 
   </ul>
 
-  {{ if and site.Params.map.provider $data.coordinates.latitude }}
+  {{ if and $data.map.provider $data.coordinates.latitude }}
   <div class="d-none">
-    <input id="map-provider" value="{{ lower site.Params.map.provider }}">
+    <input id="map-provider" value="{{ lower $data.map.provider }}">
     <input id="map-lat" value="{{ $data.coordinates.latitude }}">
     <input id="map-lng" value="{{ $data.coordinates.longitude }}">
     <input id="map-dir" value="{{ $addr_formatted }}">
-    <input id="map-zoom" value="{{ site.Params.map.zoom | default "15" }}">
-    <input id="map-api-key" value="{{ site.Params.map.api_key }}">
+    <input id="map-zoom" value="{{ $data.map.zoom | default "15" }}">
+    <input id="map-api-key" value="{{ $data.map.api_key }}">
   </div>
   <div id="map"></div>
   {{ end }}
