@@ -100,7 +100,15 @@ svg {
 
 .gallery {
   margin: 0.5em -4px 1.5em -4px;
+  width: 100%;
   font-size: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  @include media-breakpoint-down(md) {
+    justify-content: center;
+  }
 }
 
 .gallery img {
