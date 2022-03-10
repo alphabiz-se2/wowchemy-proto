@@ -46,8 +46,8 @@
 
 /* In page listings, display the linked summaries as normal text except for the hover cursor. */
 a.summary-link {
-  color: unset;
-  text-decoration: none;
+  color: unset !important;
+  text-decoration: none !important;
 }
 
 .card {
