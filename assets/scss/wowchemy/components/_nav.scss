@@ -62,8 +62,13 @@
     height: fit-content;
   }
 
+  // mobile mode
   @include media-breakpoint-down(md) {
     height: 50px;
+
+    .main-menu-item > ul.navbar-nav {
+      height: auto;
+    }
 
     .main-menu-item.collapse {
       height: auto;
