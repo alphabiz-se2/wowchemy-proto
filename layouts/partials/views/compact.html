@@ -77,7 +77,8 @@
     {{ $resource := (partial "functions/get_post_image" $item) }}
 
     {{ with $resource }}
-    {{ $image := .Resize "150x webp" }}
+    {{/* $image := .Resize "150x webp" */}}
+    {{ $image := .Resize "150x jpg" }}
     <a href="{{$link}}" {{ $target | safeHTMLAttr }}>
       <img src="{{ $image.RelPermalink }}" height="{{ $image.Height }}" width="{{ $image.Width }}"
            alt="{{ $item.Title }}" loading="lazy">

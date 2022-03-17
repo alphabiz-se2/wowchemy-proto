@@ -49,7 +49,8 @@
 
   {{ $anchor := $item.Params.image.focal_point | default "Smart" }}
   {{ with $resource }}
-  {{ $image := .Fill (printf "808x455 webp %s" $anchor) }}
+  {{/* $image := .Fill (printf "808x455 webp %s" $anchor) */}}
+  {{ $image := .Fill (printf "808x455 jpg %s" $anchor) }}
   <a href="{{ $link }}" {{ $target | safeHTMLAttr }}>
     <div class="img-hover-zoom mb-3">
       <img src="{{ $image.RelPermalink }}" height="{{ $image.Height }}" width="{{ $image.Width }}"
