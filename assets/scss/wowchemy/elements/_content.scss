@@ -81,6 +81,17 @@
   color: rgba(255, 255, 255, 0.54) !important;
 }
 
+a > .article-style {
+  &, & > p {
+    max-height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+}
+
 .article-style {
   // Any unresponsive embeds, e.g. Plotly, should be wrapped to handle on a case-by-case basis.
   // If any unresponsive embeds still remain in the article, prevent article overflow and DIV scrolling.
