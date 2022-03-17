@@ -11,11 +11,9 @@
 }
 
 .navbar {
-  --menu-primary-color: #{$sta-menu-primary};
   --distinguish-color: #{createDistinguishColor($sta-menu-primary)};
 }
 .dark .navbar {
-  --menu-primary-color: #{$sta-dark-menu-primary};
   --distinguish-color: #{createDistinguishColor($sta-dark-menu-primary)};
 }
 

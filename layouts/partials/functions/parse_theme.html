@@ -53,11 +53,9 @@
 
 {{/* Load Theme. */}}
 
-{{ if site.Params.appearance.theme_day }}
-  {{- $scr.Set "primary" ($theme_day.primary | default "#1565c0") -}}
-{{ else }}
-  {{- $scr.Set "primary" ($theme_night.primary | default "#1565c0") -}}
-{{ end }}
+
+{{- $scr.Set "primary" ($theme_day.primary | default "#1565c0") -}}
+{{- $scr.Set "dark_primary" ($theme_night.primary | default "#1565c0") -}}
 
 {{- $scr.Set "background" ($theme_day.background | default "rgb(255, 255, 255)") -}}
 {{- $scr.Set "home_section_odd" ($theme_day.home_section_odd | default "transparent") -}}

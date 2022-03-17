@@ -46,10 +46,24 @@ $sta-dark-home-section-odd: {{ $scr.Get "dark_home_section_odd" }};
 $sta-dark-home-section-even: {{ $scr.Get "dark_home_section_even" }};
 
 // Wowchemy proto append
+$sta-dark-primary: {{ $scr.Get "dark_primary" }};
+
 $sta-menu-hover: {{ $scr.Get "menu_hover" }};
 $sta-menu-border: {{ $scr.Get "menu_border" }};
 $sta-menu-shadow: {{ $scr.Get "menu_shadow" }};
 $sta-menu-blur: {{ $scr.Get "menu_blur" }};
+
+
+// config css var
+:root {
+  --primary-color: #{$sta-primary};
+  --menu-primary-color: #{$sta-menu-primary};
+}
+
+.dark {
+  --primary-color: #{$sta-dark-primary};
+  --menu-primary-color: #{$sta-dark-menu-primary};
+}
 
 @import "bootstrap_variables";
 @import "_vendor/bootstrap/bootstrap";
